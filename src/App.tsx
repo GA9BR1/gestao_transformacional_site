@@ -230,7 +230,7 @@ function App() {
         <div className='contact-content'>
           <h2>Fale conosco</h2>
           <h4>Email</h4><span>admtransformacional@gmail.com</span>
-          <h4>Whatsapp</h4><a className='whatsapp-link' target='_blank' href='https://wa.me/5562981980011?text=Ol%C3%A1%2C+gostaria+de+falar+sobre+os+servi%C3%A7os+da+Gest%C3%A3o+Transformacional'>Link do WhatsApp</a>
+          <h4>Whatsapp</h4><a className='whatsapp-link' target='_blank' href='https://api.whatsapp.com/send?phone=5562981980011&text=Ol%C3%A1,%20gostaria%20de%20falar%20sobre%20os%20servi%C3%A7os%20da%20gest%C3%A3o%20transformacional.'>Link do WhatsApp</a>
         </div>
       </section>
       <Footer/>
