@@ -5,13 +5,10 @@ import ceoImage2 from './assets/ceo2.jpg'
 import { useEffect, useState } from 'react';
 import Footer from './Footer';
 import linkedinIcon from './assets/linkedin.svg';
-import LoadingScreen from './LoadingScreen';
-
 
 function App() {
 
   const [selectedService, setSelectedService] = useState<number | null>(null);
-  const [isLoading, setIsLoading] = useState(true);
 
   const services = [
     {
@@ -83,7 +80,6 @@ function App() {
       if (window.innerWidth < 1281) {
         handlePresentationDivHeight();
       }
-      setIsLoading(false);
     };
     if (document.readyState === 'complete') {
       handleLoad();
@@ -148,7 +144,6 @@ function App() {
 
   return (
     <>
-    {isLoading && <LoadingScreen />}
     <section id='start' className='presentation'>
       <img className='background-image' src={backgroundImage} alt="Imagem de fundo(Prédios)" />
       <nav className='navbar'>
