@@ -5,11 +5,13 @@ import ceoImage2 from './assets/ceo2.jpg'
 import { useEffect, useState } from 'react';
 import Footer from './Footer';
 import linkedinIcon from './assets/linkedin.svg';
+import LoadingScreen from './LoadingScreen';
 
 
 function App() {
 
   const [selectedService, setSelectedService] = useState<number | null>(null);
+  const [isLoading, setIsLoading] = useState(true);
 
   const services = [
     {
@@ -92,7 +94,7 @@ function App() {
     window.addEventListener('load', handleLoad);
     window.addEventListener('resize', handlePresentationContentSizing);
     window.addEventListener('scroll', handleNavBarScroll);
-
+    setIsLoading(false);
     return () => {
       window.removeEventListener('resize', handlePresentationContentSizing);
       window.removeEventListener('scroll', handleNavBarScroll);
@@ -146,6 +148,7 @@ function App() {
 
   return (
     <>
+    {isLoading && <LoadingScreen />}
     <section id='start' className='presentation'>
       <img className='background-image' src={backgroundImage} alt="Imagem de fundo(Prédios)" />
       <nav className='navbar'>

@@ -270,9 +270,6 @@
   max-height: 200px; /* ajuste conforme necessário */
 }
 
-
-
-
 .contact {
   display: flex;
   flex-direction: column;
@@ -337,7 +334,6 @@
   color: #23a134;
   cursor: pointer;
 }
-
 
 @media (min-width: 563px) and (max-width: 1280px){
   .navbar {
