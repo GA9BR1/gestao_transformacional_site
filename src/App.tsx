@@ -152,11 +152,11 @@ function App() {
     <section id='start' className='presentation'>
       <img className='background-image' src={backgroundImage} alt="Imagem de fundo(Prédios)" />
       <nav className='navbar'>
-        <a className='logo-link' onClick={(e) => scrollToSection('start', e)}><img src={logoPath} alt="Logo Gestão Transformacional, Pessoas e Negócios" /></a>
+        <a href='/' className='logo-link' onClick={(e) => scrollToSection('start', e)}><img src={logoPath} alt="Logo Gestão Transformacional, Pessoas e Negócios" /></a>
         <ul className='menu-links-list'>
-          <li><a onClick={(e) => scrollToSection('about', e)}>Sobre</a></li>
-          <li><a onClick={(e) => scrollToSection('solutions', e)}>Soluções</a></li>
-          <li><a onClick={(e) => scrollToSection('contact', e)}>Contato</a></li>
+          <li><a href='#about' onClick={(e) => scrollToSection('about', e)}>Sobre</a></li>
+          <li><a href='#solutions' onClick={(e) => scrollToSection('solutions', e)}>Soluções</a></li>
+          <li><a href='#contact' onClick={(e) => scrollToSection('contact', e)}>Contato</a></li>
         </ul>
       </nav>
       <div className='presentation-content-div'>
