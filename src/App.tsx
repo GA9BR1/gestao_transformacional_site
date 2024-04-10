@@ -83,6 +83,7 @@ function App() {
       if (window.innerWidth < 1281) {
         handlePresentationDivHeight();
       }
+      setIsLoading(false);
     };
     if (document.readyState === 'complete') {
       handleLoad();
@@ -94,7 +95,6 @@ function App() {
     window.addEventListener('load', handleLoad);
     window.addEventListener('resize', handlePresentationContentSizing);
     window.addEventListener('scroll', handleNavBarScroll);
-    setIsLoading(false);
     return () => {
       window.removeEventListener('resize', handlePresentationContentSizing);
       window.removeEventListener('scroll', handleNavBarScroll);
