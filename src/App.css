@@ -57,7 +57,7 @@
 .presentation-content-div {
   display: flex;
   flex-direction: column;
-  padding: 80% 5% 0;
+  padding: 50% 5% 0;
   align-self: center;
   width: 100%
 }

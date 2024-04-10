@@ -76,25 +76,11 @@ function App() {
   };
 
   useEffect(() => {
-    const handleLoad = () => {
-      if (window.innerWidth < 1281) {
-        handlePresentationDivHeight();
-      }
-    };
-    if (document.readyState === 'complete') {
-      handleLoad();
-    } else {
-      window.addEventListener('load', handleLoad, false);
-    }
-    
-
-    window.addEventListener('load', handleLoad);
     window.addEventListener('resize', handlePresentationContentSizing);
     window.addEventListener('scroll', handleNavBarScroll);
     return () => {
       window.removeEventListener('resize', handlePresentationContentSizing);
       window.removeEventListener('scroll', handleNavBarScroll);
-      window.removeEventListener('load', handleLoad);
     }
   }); 
 
